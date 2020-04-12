@@ -132,6 +132,17 @@ const config = {
             outputPath: 'fonts'
           }
         }]
+      },
+      {
+        test: /\.(mp3)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'audio',
+              name: '[name].[ext]'
+            }},
+          ]
       }
     ]
   },
@@ -146,7 +157,8 @@ const config = {
     }),
     new CopyWebpackPlugin([
       // {from: './src/static', to: './'},
-      // {from: './src/img', to: './img/'},
+      {from: './src/img', to: './img/'},
+      {from: './src/audio', to: './audio/'},
     ]),
   ],
 

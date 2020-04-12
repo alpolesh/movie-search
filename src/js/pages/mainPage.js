@@ -1,47 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Canvas" />
-    <meta name="author" lang="en" content="Andrei Poleshchuck" />
-    <title>English for kids</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-    <header class="header">
-        <div class="navigation">
-            <a href="#" class="navigation__link navigation__link_active">Main Page</a>
-            <a href="#" class="navigation__link">Action (set A)</a>
-            <a href="#" class="navigation__link">Action (set B)</a>
-            <a href="#" class="navigation__link">Action (set C)</a>
-            <a href="#" class="navigation__link">Adjective</a>
-            <a href="#" class="navigation__link">Animal (set A)</a>
-            <a href="#" class="navigation__link">Animal (set B)</a>
-            <a href="#" class="navigation__link">Clothes</a>
-            <a href="#" class="navigation__link">Emotions</a>
-        </div>
-        <div class="header__wrapper wrapper">
-            <div class="header__container">
-                <div class="header__burger">
-                    <div class="burger__container">
-                        <span class="header__line"></span>
-                      </div>
-                </div>
-                <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                    <label class="custom-control-label" for="customSwitch1">Play</label>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main class="main">
-        <div class="main__wrapper wrapper">
+export default `
+<div class="main__wrapper wrapper">
             <div class="card__container">
-                <!-- <div class="card text-white bg-info">
+                <div class="card text-white bg-info">
                     <img src="./img/dance.jpg" class="card-img-top rounded-circle" alt="Action(set A)">
                     <div class="card-body">
                       <p class="card-text">Action(set A)</p>
@@ -54,13 +14,13 @@
                     </div>
                 </div>
                 <div class="card text-white bg-info">
-                    <img src="./img/clean.jpg" class="card-img-top rounded-circle" alt="Action(set C)">
+                    <img src="./img/cry.jpg" class="card-img-top rounded-circle" alt="Action(set C)">
                     <div class="card-body">
                       <p class="card-text">Action(set C)</p>
                     </div>
                 </div>
                 <div class="card text-white bg-info">
-                    <img src="./img/strong.jpg" class="card-img-top rounded-circle" alt="Adjective">
+                    <img src="./img/dance.jpg" class="card-img-top rounded-circle" alt="Adjective">
                     <div class="card-body">
                       <p class="card-text">Adjective</p>
                     </div>
@@ -88,13 +48,8 @@
                     <div class="card-body">
                       <p class="card-text">Emotion</p>
                     </div>
-                </div> -->
+                </div>
             </div>
             
         </div>
-        
-    </main>
-    
-</body>
-
-</html>
+`
