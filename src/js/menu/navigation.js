@@ -1,6 +1,5 @@
 import cards from "../cards/cards";
-import Card from "../cards/card";
-import store from "../index";
+import Card from "../cards/create_card";
 
 function navigationLink() {
     document.querySelector('.navigation').addEventListener('click', (event) => {

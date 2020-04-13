@@ -1,44 +1,7 @@
 const cards = [
-  {
-    'Main Page':
-    [
-      {
-        word: 'Action (set A)',
-        image: './img/dance.jpg',
-      },
-      {
-        word: 'Action (set B)',
-        image: './img/swim.jpg',
-      },
-      {
-        word: 'Action (set C)',
-        image: './img/clean.jpg',
-      },
-      {
-        word: 'Adjective',
-        image: './img/strong.jpg',
-      },
-      {
-        word: 'Animal (set A)',
-        image: './img/cat.jpg',
-      },
-      {
-        word: 'Animal (set B)',
-        image: './img/bird.jpg',
-      },
-      {
-        word: 'Clothes',
-        image: './img/blouse.jpg',
-      },
-      {
-        word: 'Emotions',
-        image: './img/smile.jpg',
-      }
-    ]
-  },
   { 
-    'Action (set A)':
-    [
+    categoryName: 'Action (set A)',
+    items: [
       {
         word: 'cry',
         translation: 'плакать',
@@ -90,8 +53,8 @@ const cards = [
     ]
   },
   {
-    'Action (set B)':
-    [
+    categoryName: 'Action (set B)',
+    items: [
       {
         word: 'open',
         translation: 'открывать',
@@ -143,8 +106,8 @@ const cards = [
     ]
   },
   {
-    'Action (set C)':
-    [
+    categoryName: 'Action (set C)',
+    items: [
       {
         word: 'lie',
         translation: 'лежать',
@@ -196,8 +159,8 @@ const cards = [
     ]
   },
   {
-    'Adjective':
-    [
+    categoryName: 'Adjective',
+    items: [
       {
         word: 'lazy',
         translation: 'ленивый',
@@ -249,8 +212,8 @@ const cards = [
     ]
   },
   {
-    'Animal (set A)':
-    [
+    categoryName: 'Animal (set A)',
+    items: [
       {
         word: 'cat',
         translation: 'кот',
@@ -302,8 +265,8 @@ const cards = [
     ]
   },
   { 
-    'Animal (set B)':
-    [
+    categoryName: 'Animal (set B)',
+    items: [
       {
         word: 'bird',
         translation: 'птица',
@@ -355,8 +318,8 @@ const cards = [
     ]
   },
   {
-    'Clothes':
-    [
+    categoryName: 'Clothes',
+    items: [
       {
         word: 'skirt',
         translation: 'юбка',
@@ -408,8 +371,8 @@ const cards = [
     ]
   },
   { 
-    'Emotions':
-    [
+    categoryName: 'Emotions',
+    items: [
       {
         word: 'sad',
         translation: 'грустный',
