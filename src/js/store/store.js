@@ -1,5 +1,5 @@
 import cards from '../cards/cards';
-import Card from '../cards/create_card';
+import Card from '../cards/createCard';
 
 const store = {
     currentRoute: 'Main Page', // 'Main Page' / 'Action (set A)' / ...
@@ -23,6 +23,6 @@ cards.forEach((item) => {
             return new Card(element);
         })
     })
-  })
+})
 
 export default store;
