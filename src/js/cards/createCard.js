@@ -3,9 +3,15 @@ import updateBoard from '../board/updateBoard';
 
 class Card {
     constructor({word, translation, image, audioSrc}, categoryName) {
+        // Card in train mode
         const cardElement = document.createElement('div');
         cardElement.classList.add('card', 'text-white', 'bg-info');
         this.cardElement = cardElement;
+
+        // Card in play mode
+        const cardElementPlay = document.createElement('div');
+        cardElementPlay.classList.add('card', 'text-white', 'bg-info', 'card-play');
+        this.cardElementPlay = cardElementPlay;
 
         this.isFlipped = false;
 
@@ -22,6 +28,9 @@ class Card {
           text: `<p class="card-text text-back">${translation}</p>`
         }
         
+        this.modePlay =  
+        `<img src="${image}" class="card-img-top rounded-circle" alt="${categoryName}">`
+
         this.makeFlip = () => {
           if (!this.isFlipped) {
             this.cardElement.insertAdjacentHTML('afterbegin', this.flipped.image);
@@ -31,8 +40,12 @@ class Card {
           }
           // this.isFlipped = !this.isFlipped;
         }
+
+        this.audiofile = audioSrc;
+        this.cardElementPlay.innerHTML = this.modePlay;
         this.cardElement.innerHTML = this.initialPosition;
         this.makeFlip();
+        
         this.cardElement.addEventListener("click", (e) => {
           if (store.currentRoute === 'Main Page') {
             store.currentRoute = categoryName;
@@ -45,7 +58,7 @@ class Card {
           if (e.target.classList.contains('rotate')) {
             this.cardElement.classList.add('flip');
             this.cardElement.classList.remove('flip-two');
-            this.cardElement.addEventListener('mouseleave', (e) => {
+            this.cardElement.addEventListener('mouseleave', () => {
               this.cardElement.classList.add('flip-two');
               this.cardElement.classList.remove('flip');
             })

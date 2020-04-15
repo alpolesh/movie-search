@@ -17,6 +17,10 @@
     @extend %font-add; 
 }
 
+.card-play {
+    background: linear-gradient(to bottom, #fefcea, #ff7c00)!important;
+}
+
 .flip, .flip-two {
     transform-style: preserve-3d;
     transform: rotateY(180deg);
