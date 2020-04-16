@@ -21,6 +21,14 @@
     background: linear-gradient(to bottom, #fefcea, #ff7c00)!important;
 }
 
+.card-bordered-true {
+    opacity: 0.3;
+}
+
+.card-bordered-false {
+    border: 10px solid red!important;
+}
+
 .flip, .flip-two {
     transform-style: preserve-3d;
     transform: rotateY(180deg);

@@ -11,6 +11,7 @@ class Card {
         // Card in play mode
         const cardElementPlay = document.createElement('div');
         cardElementPlay.classList.add('card', 'text-white', 'bg-info', 'card-play');
+        cardElementPlay.setAttribute('audioSrc', `${audioSrc}`);
         this.cardElementPlay = cardElementPlay;
 
         this.isFlipped = false;
@@ -41,7 +42,7 @@ class Card {
           // this.isFlipped = !this.isFlipped;
         }
 
-        this.audiofile = audioSrc;
+        
         this.cardElementPlay.innerHTML = this.modePlay;
         this.cardElement.innerHTML = this.initialPosition;
         this.makeFlip();

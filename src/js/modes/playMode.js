@@ -1,8 +1,9 @@
 import store from '../store/store';
 import updateBoard from '../board/updateBoard';
 
-function play() {
+function playMode() {
     document.querySelector('.track').addEventListener('click', () => {
+        store.isGameStarted = false;
         if (store.mode === 'train') {
             store.mode = 'play';
         } else store.mode = 'train';
@@ -12,4 +13,4 @@ function play() {
 }
 
 
-export default play;
+export default playMode;

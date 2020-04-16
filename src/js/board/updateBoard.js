@@ -22,6 +22,8 @@ function updateBoard(){
     } else if (store.mode === 'train' && store.currentRoute === 'Main Page') {
       document.querySelectorAll('.card').forEach((el) => el.classList.remove('card-play'));
     }
+
+    document.querySelectorAll('.card').forEach((item) => item.classList.remove('card-bordered-false', 'card-bordered-true'));
 }
 
 export default updateBoard;

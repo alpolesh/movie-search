@@ -11,6 +11,7 @@ class MenuItem {
         menuElement.innerHTML = categoryName;
         this.menuElement = menuElement;
         this.menuElement.addEventListener('click', (event) => {
+            store.isGameStarted = false;
             document.querySelectorAll('.navigation__link').forEach(item => item.classList.remove('navigation__link_active'));
             event.target.classList.add('navigation__link_active');
             store.currentRoute = categoryName;

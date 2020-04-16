@@ -9,14 +9,13 @@ import Card from './cards/createCard';
 import createBoard from './board/createBoard';
 import updateBoard from './board/updateBoard';
 import navigationLink from './menu/navigation';
-import play from './modes/play';
+import playMode from './modes/playMode';
 import startGame from './modes/startGame';
-
 
 createBoard()
 navigationLink();
 updateBoard();
-play();
+playMode();
 startGame();
 
 // open and close menu
