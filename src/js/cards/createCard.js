@@ -30,7 +30,7 @@ class Card {
         }
         
         this.modePlay =  
-        `<img src="${image}" class="card-img-top rounded-circle" alt="${categoryName}">`
+        `<img src="${image}" class="card-img-top rounded-circle card-img-play" alt="${categoryName}">`
 
         this.makeFlip = () => {
           if (!this.isFlipped) {

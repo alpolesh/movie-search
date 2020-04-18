@@ -1,4 +1,9 @@
 import store from '../store/store';
+import getResult from '../templates/getResult';
+import updateBoard from '../board/updateBoard';
+import createStarContainer from '../stars/createStarContainer';
+import updateStarContainer from '../stars/updateStarContainer';
+import updateStartButton from './updateStartButton';
 
 function startGame() {
     const currentSound = [];
@@ -18,11 +23,17 @@ function startGame() {
 
     document.querySelector('.start').addEventListener('click', () => {
         if (!store.isGameStarted) {
+            createStarContainer();
+            mistakesQuantity = 0;
             store.isGameStarted = true;
             const {content} = store.routes.find((item) => item.categoryName === store.currentRoute);
             audiofiles = content.map((element) => {
                 return element.cardElementPlay.getAttribute('audioSrc');
             })
+            audiofiles.sort(() =>{
+                return Math.random() - 0.5;
+            });
+            updateStartButton('Repeat');
             playWord(audiofiles[audiofiles.length-1]);
         } else playWord(audiofiles[audiofiles.length-1]);
     })
@@ -30,14 +41,29 @@ function startGame() {
     // playing sounds and checking answers
     document.querySelector('.card__container').addEventListener('click', (e) => {
         if (store.mode === 'play' && store.isGameStarted) {
-            if (e.target.closest('.card')) {
+            if (e.target.closest('.card') && !e.target.closest('.card').classList.contains('card-bordered-true')) {
                 if (e.target.closest('.card').getAttribute('audioSrc') === currentSound[0]) {
+                    updateStarContainer('win');
                     e.target.closest('.card').classList.add('card-bordered-true');
                     document.querySelectorAll('.card').forEach((item) => item.classList.remove('card-bordered-false'));
                     playWord('audio/ok.mp3');
                     audiofiles.pop();
-                    setTimeout(() => {playWord(audiofiles[audiofiles.length-1])}, 600) ;
+                    if (audiofiles.length) {
+                        setTimeout(() => {playWord(audiofiles[audiofiles.length-1])}, 600);
+                    } else {
+                        if (!mistakesQuantity) {
+                            playWord('audio/success.mp3');
+                            getResult('win');
+                        } else {
+                            playWord('audio/failure.mp3');
+                            getResult('lose', mistakesQuantity);
+                        } 
+                        store.currentRoute = 'Main Page';
+                        store.isGameStarted = false;
+                        setTimeout(updateBoard, 4000);
+                    }
                 } else {
+                    updateStarContainer();
                     playWord('audio/error.mp3');
                     e.target.closest('.card').classList.add('card-bordered-false');
                     mistakesQuantity += 1;
