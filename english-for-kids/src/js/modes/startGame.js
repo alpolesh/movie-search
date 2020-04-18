@@ -4,6 +4,7 @@ import updateBoard from '../board/updateBoard';
 import createStarContainer from '../stars/createStarContainer';
 import updateStarContainer from '../stars/updateStarContainer';
 import updateStartButton from './updateStartButton';
+import countQuantity from '../statistics/countQuantity';
 
 function startGame() {
     const currentSound = [];
@@ -43,6 +44,7 @@ function startGame() {
         if (store.mode === 'play' && store.isGameStarted) {
             if (e.target.closest('.card') && !e.target.closest('.card').classList.contains('card-bordered-true')) {
                 if (e.target.closest('.card').getAttribute('audioSrc') === currentSound[0]) {
+                    countQuantity(e.target.closest('.card').getAttribute('word'), 'correct');
                     updateStarContainer('win');
                     e.target.closest('.card').classList.add('card-bordered-true');
                     document.querySelectorAll('.card').forEach((item) => item.classList.remove('card-bordered-false'));
@@ -67,6 +69,7 @@ function startGame() {
                     playWord('audio/error.mp3');
                     e.target.closest('.card').classList.add('card-bordered-false');
                     mistakesQuantity += 1;
+                    countQuantity(e.target.closest('.card').getAttribute('word'), 'wrong');
                 } 
             }
         }

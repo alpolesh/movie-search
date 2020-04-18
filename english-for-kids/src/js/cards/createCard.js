@@ -1,5 +1,7 @@
 import store from '../store/store';
 import updateBoard from '../board/updateBoard';
+import updateMenu from '../menu/updateMenu';
+import countQuantity from '../statistics/countQuantity';
 
 class Card {
     constructor({word, translation, image, audioSrc}, categoryName) {
@@ -12,6 +14,7 @@ class Card {
         const cardElementPlay = document.createElement('div');
         cardElementPlay.classList.add('card', 'text-white', 'bg-info', 'card-play');
         cardElementPlay.setAttribute('audioSrc', `${audioSrc}`);
+        cardElementPlay.setAttribute('word', `${word}`);
         this.cardElementPlay = cardElementPlay;
 
         this.isFlipped = false;
@@ -50,8 +53,13 @@ class Card {
         this.cardElement.addEventListener("click", (e) => {
           if (store.currentRoute === 'Main Page') {
             store.currentRoute = categoryName;
+            updateMenu(Array.from(document.querySelectorAll('.navigation__link')).find((item) => item.innerText === store.currentRoute));
             updateBoard();
           } else if (store.mode === 'train') {
+            // Quantity of clicks on cards in train mode
+
+            countQuantity(e.target.closest('.card').querySelector('.card-body').lastElementChild.innerText);
+            
             const audio = new Audio();
             audio.src = audioSrc;
             audio.play();

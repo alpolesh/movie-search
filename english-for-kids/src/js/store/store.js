@@ -8,8 +8,13 @@ const store = {
         {
             categoryName: 'Main Page',
             content: []
+        },
+        {
+            categoryName: 'Statistics',
+            content: []
         }
-    ]
+    ],
+    statistics: []
 }
 
 

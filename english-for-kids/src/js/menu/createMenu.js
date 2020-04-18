@@ -1,5 +1,6 @@
 import updateBoard from "../board/updateBoard";
 import store from "../store/store";
+import updateMenu from "./updateMenu";
 
 class MenuItem {
     constructor({categoryName}) {
@@ -12,8 +13,7 @@ class MenuItem {
         this.menuElement = menuElement;
         this.menuElement.addEventListener('click', (event) => {
             store.isGameStarted = false;
-            document.querySelectorAll('.navigation__link').forEach(item => item.classList.remove('navigation__link_active'));
-            event.target.classList.add('navigation__link_active');
+            updateMenu(event.target);
             store.currentRoute = categoryName;
             updateBoard();
         })
