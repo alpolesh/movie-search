@@ -1,11 +1,8 @@
 import '../css/style.css';
 import '../css/style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import store from './store/store';
 import {openMenu} from './menu/openMenu';
 import {closeMenu} from './menu/closeMenu';
-import cards from './cards/cards';
-import Card from './cards/createCard';
 import createBoard from './board/createBoard';
 import updateBoard from './board/updateBoard';
 import navigationLink from './menu/navigation';
