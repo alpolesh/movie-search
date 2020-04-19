@@ -10,12 +10,15 @@ import playMode from './modes/playMode';
 import startGame from './modes/startGame';
 import cards from './cards/cards';
 import store from './store/store';
+import sort from './statistics/sort';
 
-createBoard()
-navigationLink();
+
+createBoard();
 updateBoard();
+navigationLink();
 playMode();
 startGame();
+// sort();
 
 // open and close menu
 document.addEventListener('click', (event) => {
@@ -32,16 +35,20 @@ document.addEventListener('click', (event) => {
 });
 
 const statistics = cards.slice();
-statistics.forEach((item) => {
-  item.items.forEach((element) => {
-    element.train = 0;
-    element.correct = 0;
-    element.wrong = 0;
-    element.percent = 0;
-  })
-})
+    statistics.forEach((item) => {
+        item.items.forEach((element) => {
+          element.train = 0;
+          element.correct = 0;
+          element.wrong = 0;
+          element.percent = 0;
+        })
+    })
 
-store.statistics = statistics;
+if (!localStorage.stat) {
+    store.statistics = statistics;
+} else store.statistics = JSON.parse(localStorage.getItem('stat'));
+
+
 
 
 

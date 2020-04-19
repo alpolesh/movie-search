@@ -112,49 +112,49 @@ const cards = [
         word: 'lie',
         translation: 'лежать',
         image: './img/lie.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/lie.mp3'
       },
       {
         word: 'seat',
         translation: 'сидеть',
         image: './img/seat.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/seat.mp3'
       },
       {
         word: 'break',
         translation: 'ломать',
         image: './img/break.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/break.mp3'
       },
       {
         word: 'wait',
         translation: 'ждать',
         image: './img/wait.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/wait.mp3'
       },
       {
         word: 'ask',
         translation: 'просить',
         image: './img/ask.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/ask.mp3'
       },
       {
         word: 'help',
         translation: 'помогать',
         image: './img/help.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/help.mp3'
       },
       {
         word: 'clean',
         translation: 'убирать',
         image: './img/clean.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/clean.mp3'
       },
       {
         word: 'give',
         translation: 'давать',
         image: './img/give.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/give.mp3'
       }
     ]
   },
@@ -165,49 +165,49 @@ const cards = [
         word: 'lazy',
         translation: 'ленивый',
         image: './img/lazy.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/lazy.mp3'
       },
       {
         word: 'fast',
         translation: 'быстрый',
         image: './img/fast.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/fast.mp3'
       },
       {
         word: 'strong',
         translation: 'умный',
         image: './img/strong.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/strong.mp3'
       },
       {
         word: 'dangerous',
         translation: 'опасный',
         image: './img/dangerous.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/dangerous.mp3'
       },
       {
         word: 'green',
         translation: 'зеленый',
         image: './img/green.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/green.mp3'
       },
       {
         word: 'yellow',
         translation: 'желтый',
         image: './img/yellow.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/yellow.mp3'
       },
       {
         word: 'deep',
         translation: 'глубокий',
         image: './img/deep.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/deep.mp3'
       },
       {
         word: 'small',
         translation: 'маленький',
         image: './img/small.jpg',
-        audioSrc: ''
+        audioSrc: 'audio/small.mp3'
       }
     ]
   },

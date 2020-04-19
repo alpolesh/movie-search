@@ -5,12 +5,12 @@ function getResult(result, mistakes) {
     resultWindow.classList.add('result');
     const victory = 
     `<div class="result__container">
-    <img src="./img/success.png" class="" alt="victory">
+    <img src="./img/success.jpg" class="" alt="victory">
      <p>Good job!</p>
      </div>`;
     const failure = 
     `<div class="result__container">
-    <img src="./img/failure.png" class="" alt="failory">
+    <img src="./img/failure.jpg" class="" alt="failory">
     ${mistakes !== 1 ? `<p>${mistakes} mistakes</p>` : `<p>${mistakes} mistake</p>`}
      </div>`;
 

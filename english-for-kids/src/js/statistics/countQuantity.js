@@ -1,4 +1,5 @@
 import store from '../store/store';
+import updateTable from './updateTable';
 
 function countQuantity(targetWord, result) {
     store.statistics.forEach((item) => {
@@ -15,6 +16,7 @@ function countQuantity(targetWord, result) {
           }
         })
     })
+    updateTable();
 }
 
 export default countQuantity;

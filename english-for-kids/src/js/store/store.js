@@ -14,7 +14,8 @@ const store = {
             content: []
         }
     ],
-    statistics: []
+    statistics: [],
+    sort: 0
 }
 
 

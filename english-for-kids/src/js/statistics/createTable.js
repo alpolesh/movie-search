@@ -2,6 +2,7 @@ import store from "../store/store";
 import cards from "../cards/cards";
 
 function createTable() {
+
     const tableContainer = document.createElement('div');
     tableContainer.classList.add('table-container');
     const table = document.createElement('table');
@@ -48,6 +49,10 @@ function createTable() {
     }
     table.append(tbody);
     tableContainer.append(table);
+    const buttonReset = document.createElement('div');
+    buttonReset.classList.add('button_reset');
+    buttonReset.innerHTML = `<button class="reset">Reset</button>`;
+    document.querySelector('.card__container').append(buttonReset);
     document.querySelector('.card__container').append(tableContainer);
 }
 
