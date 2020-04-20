@@ -7,7 +7,7 @@
     margin-bottom: 20px;
 }
 
-.button_reset {
+.button-container {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -29,7 +29,7 @@
     color: white;
 }
 
-.reset {
+.button-container__button {
     width: 20%;
     height: 40px;
     border-radius: 10px;
@@ -42,8 +42,8 @@
 .start, 
 .start:active, 
 .start:focus,
-.reset,
-.reset:active, 
-.reset:focus {
+.button-container__button,
+.button-container__button:active, 
+.button-container__button:focus {
     outline: none;
 }

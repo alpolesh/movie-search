@@ -57,9 +57,12 @@ class Card {
             updateBoard();
           } else if (store.mode === 'train') {
             // Quantity of clicks on cards in train mode
-
             countQuantity(e.target.closest('.card').querySelector('.card-body').lastElementChild.innerText);
             
+            const audio = new Audio();
+            audio.src = audioSrc;
+            audio.play();
+          } else if (store.mode === 'play' && store.currentRoute === 'Statistics') {
             const audio = new Audio();
             audio.src = audioSrc;
             audio.play();

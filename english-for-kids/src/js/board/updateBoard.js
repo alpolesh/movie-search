@@ -1,9 +1,9 @@
 import store from '../store/store';
 import updateStartButton from '../modes/updateStartButton';
 import createTable from '../statistics/createTable';
-import updateMenu from '../menu/updateMenu';
 import resetTable from '../statistics/resetTable';
-import sort from '../statistics/sort';
+import sortListeners from '../statistics/sort/sortListeners';
+import repeat from '../statistics/repeat';
 
 function updateBoard(){
     const container = document.querySelector('.card__container');
@@ -13,7 +13,8 @@ function updateBoard(){
     if (curr === 'Statistics') {
       createTable();
       resetTable();
-      sort();
+      sortListeners();
+      repeat();
     }
   
     const {content} = store.routes.find((item) => item.categoryName === curr);

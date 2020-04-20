@@ -8,17 +8,14 @@ import updateBoard from './board/updateBoard';
 import navigationLink from './menu/navigation';
 import playMode from './modes/playMode';
 import startGame from './modes/startGame';
-import cards from './cards/cards';
-import store from './store/store';
-import sort from './statistics/sort';
+import createStat from './statistics/createStat';
 
-
+createStat();
 createBoard();
 updateBoard();
 navigationLink();
 playMode();
 startGame();
-// sort();
 
 // open and close menu
 document.addEventListener('click', (event) => {
@@ -34,19 +31,7 @@ document.addEventListener('click', (event) => {
   }
 });
 
-const statistics = cards.slice();
-    statistics.forEach((item) => {
-        item.items.forEach((element) => {
-          element.train = 0;
-          element.correct = 0;
-          element.wrong = 0;
-          element.percent = 0;
-        })
-    })
 
-if (!localStorage.stat) {
-    store.statistics = statistics;
-} else store.statistics = JSON.parse(localStorage.getItem('stat'));
 
 
 

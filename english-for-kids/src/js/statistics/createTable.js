@@ -1,5 +1,4 @@
 import store from "../store/store";
-import cards from "../cards/cards";
 
 function createTable() {
 
@@ -20,39 +19,43 @@ function createTable() {
     </tr>`
     table.append(thead);
     const tbody = document.createElement('tbody');
-    for (let i = 0; i < store.statistics.length; i++) {
-        for (let j = 0; j < store.statistics[i].items.length; j++) {
-            let tr = document.createElement('tr');
-            let th = document.createElement('th');
-            th.innerText = store.statistics[i].categoryName;
+    // for (let i = 0; i < store.statistics.length; i+=1) {
+        for (let j = 0; j < store.statistics.length; j+=1) {
+            const tr = document.createElement('tr');
+            const th = document.createElement('th');
+            th.innerText = store.statistics[j].categoryName;
             tr.append(th);
             let td = document.createElement('td');
-            td.innerText = store.statistics[i].items[j].word;
+            td.innerText = store.statistics[j].word;
             tr.append(td);
             td = document.createElement('td');
-            td.innerText = store.statistics[i].items[j].translation;
+            td.innerText = store.statistics[j].translation;
             tr.append(td);
             td = document.createElement('td');
-            td.innerText = store.statistics[i].items[j].train; 
+            td.innerText = store.statistics[j].train; 
             tr.append(td);
             td = document.createElement('td');
-            td.innerText = store.statistics[i].items[j].correct; 
+            td.innerText = store.statistics[j].correct; 
             tr.append(td);
             td = document.createElement('td');
-            td.innerText = store.statistics[i].items[j].wrong; 
+            td.innerText = store.statistics[j].wrong; 
             tr.append(td);
             td = document.createElement('td');
-            td.innerText = store.statistics[i].items[j].percent; 
+            td.innerText = store.statistics[j].percent; 
             tr.append(td);
             tbody.append(tr);
         }
-    }
+    // }
     table.append(tbody);
     tableContainer.append(table);
-    const buttonReset = document.createElement('div');
-    buttonReset.classList.add('button_reset');
-    buttonReset.innerHTML = `<button class="reset">Reset</button>`;
-    document.querySelector('.card__container').append(buttonReset);
+ 
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('button-container');
+    buttonContainer.innerHTML = `
+    <button class="button-container__button reset">Reset</button>
+    <button class="button-container__button repeat">Repeat difficult words</button>
+    `;
+    document.querySelector('.card__container').append(buttonContainer);
     document.querySelector('.card__container').append(tableContainer);
 }
 
