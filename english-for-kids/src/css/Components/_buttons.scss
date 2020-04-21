@@ -37,6 +37,14 @@
     @extend %font-add; 
     font-size: 20px;
     color: white;
+    @include media-laptop-small {
+        height: 60px;
+        width: 25%;
+    }
+    @include media-mobile {
+        height: 95px;
+        width: 30%;
+    }
 }
 
 .start, 

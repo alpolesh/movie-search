@@ -10,12 +10,12 @@ import playMode from './modes/playMode';
 import startGame from './modes/startGame';
 import createStat from './statistics/createStat';
 
-createStat();
 createBoard();
 updateBoard();
 navigationLink();
 playMode();
 startGame();
+createStat();
 
 // open and close menu
 document.addEventListener('click', (event) => {
