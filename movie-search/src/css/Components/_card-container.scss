@@ -1,0 +1,106 @@
+.card__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+  
+.card {
+    position: relative;
+    width: 280px;
+    height: 270px;
+    margin: 20px;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    @extend %font-add; 
+    cursor: pointer;
+    
+}
+
+.card-play {
+    background: linear-gradient(to bottom, #fefcea, #ff7c00)!important;
+    .card-img-play {
+        border-radius: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: 0;
+    }
+}
+
+
+.card-bordered-true {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.card-bordered-false {
+    border: 10px solid red!important;
+}
+
+.flip, .flip-two {
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition-duration: 0.6s;
+}
+
+.flip-two {
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition-duration: 0.6s;
+}
+
+.card-img-top {
+    position: absolute;
+    width: 12rem!important;
+    height: 12rem!important;
+    object-fit: cover;
+    margin-top: 20px;
+    border: solid white;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.rotate:hover {
+    transform: scale(1.2);
+    transition-duration: 0.3s;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.8rem!important;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.card-text {
+    margin-bottom: 0!important;
+    position: absolute;
+    bottom: 12px;
+}
+
+.text-back,
+.text-front {
+    backface-visibility: hidden;
+}
+
+.text-back {
+    transform: rotateY(180deg);
+}
+
+.rotate {
+    width: 40px;
+    height: 40px;
+    backface-visibility: hidden;
+    position: absolute;
+    right: 10px;
+    bottom: 3px;
+}
+
+
+
+

@@ -1,0 +1,15 @@
+.header__container {
+    width: 1240px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+    @include media-laptop-small {
+        width: 920px;
+    }
+    @include media-tablet {
+        width: 600px;
+    }
+    @include media-mobile {
+        width: 280px;
+    }
+}
