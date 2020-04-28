@@ -1,15 +1,9 @@
-.header__container {
-    width: 1240px;
-    height: 80px;
-    position: relative;
-    margin: 0 auto;
-    @include media-laptop-small {
-        width: 920px;
-    }
-    @include media-tablet {
-        width: 600px;
-    }
-    @include media-mobile {
-        width: 280px;
-    }
+.header {
+    width: 100%;
+    height: 110px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
