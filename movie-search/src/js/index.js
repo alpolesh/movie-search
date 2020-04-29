@@ -1,23 +1,19 @@
 import '../css/style.css';
 import '../css/style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import swiper from './swiper/createSwiper';
+import store from './store';
+import getMovieTitle from './API/getMovieTitle';
+import updateSwiper from './swiper/updateSwiper';
 
 
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-
+document.querySelector('.search').addEventListener('click', async (e) => {
+  e.preventDefault();
+  store.searchText = document.querySelector('form input').value;
+  await getMovieTitle(store.searchText);
+  await updateSwiper();
+  
+}) ;
 
 
 
