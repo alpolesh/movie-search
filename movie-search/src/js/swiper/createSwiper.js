@@ -3,8 +3,8 @@
 // eslint-disable-next-line no-undef
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
+    spaceBetween: 80,
+    loop: false,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

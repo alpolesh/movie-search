@@ -3,7 +3,8 @@
 const store = {
     searchText: '',
     currentPage: 1,
-    dataBase: []
+    dataBase: [],
+    isSearch: false,
 }
 
 export default store;

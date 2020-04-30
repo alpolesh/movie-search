@@ -7,4 +7,14 @@
         text-decoration: none!important;
         @extend %font-add; 
     }
+    
+}
+.footer__my-github {
+    a:before {
+        content: "\f09b";
+        font-family: FontAwesome;
+        padding-right: 5px;
+        font-size: 24px;
+        vertical-align: middle;
+    }
 }
