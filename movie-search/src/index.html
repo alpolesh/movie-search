@@ -21,116 +21,19 @@
         <div class="main__wrapper wrapper">
             <div class="d1">
                 <form>
-                <input type="text" placeholder="Искать здесь...">
-                <button type="submit" class="search"></button>
+                    <i class="fa fa-circle-o-notch fa-spin" style="display: none;"></i>
+                    <input autofocus type="text" placeholder="Search here..." class="input-area">
+                    <button type="submit" class="search"></button>
                 </form>
+                <button type="submit" class="reset"></button>
+                <button type="submit" class="keyboard"></button>
             </div>
+            <h5 class="error__text"></h5>  
             <!-- Swiper -->
             <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt0454921/videogallery/" class="swiper-slide__title">The Pursuit of Happyness</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BMTQ5NjQ0NDI3NF5BMl5BanBnXkFtZTcwNDI0MjEzMw@@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">2006</span>
-                        <span class="swiper-slide__rating">8.0</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt0109830/videogallery/" class="swiper-slide__title">Forrest Gump</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">1994</span>
-                        <span class="swiper-slide__rating">8.8</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt0108052/videogallery/" class="swiper-slide__title">Schindler's List</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">1993</span>
-                        <span class="swiper-slide__rating">8.9</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt1675434/videogallery/" class="swiper-slide__title">The Intouchables</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">2011</span>
-                        <span class="swiper-slide__rating">8.5</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt0110413/videogallery/" class="swiper-slide__title">Léon: The Professional</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BZDAwYTlhMDEtNTg0OS00NDY2LWJjOWItNWY3YTZkM2UxYzUzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">1994</span>
-                        <span class="swiper-slide__rating">8.5</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt0119472/videogallery/" class="swiper-slide__title">Knockin' on Heaven's Door</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BMTk2MjcxNjMzN15BMl5BanBnXkFtZTgwMTE3OTEwNjE@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">1997</span>
-                        <span class="swiper-slide__rating">8.0</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt0110912/videogallery/" class="swiper-slide__title">Pulp Fiction</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">1994</span>
-                        <span class="swiper-slide__rating">8.9</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt0268978/videogallery/" class="swiper-slide__title">A Beautiful Mind</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BMzcwYWFkYzktZjAzNC00OGY1LWI4YTgtNzc5MzVjMDVmNjY0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">2001</span>
-                        <span class="swiper-slide__rating">8.2</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt0120735/videogallery/" class="swiper-slide__title">Lock, Stock and Two Smoking Barrels</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BMTAyN2JmZmEtNjAyMy00NzYwLThmY2MtYWQ3OGNhNjExMmM4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">1998</span>
-                        <span class="swiper-slide__rating">8.2</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide__title-container">
-                            <a href="https://www.imdb.com/title/tt7131622/videogallery/" class="swiper-slide__title">Once Upon a Time... in Hollywood</a>
-                        </div>
-                        <div class="swiper-slide__image">
-                            <img src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg" alt="image">
-                        </div>
-                        <span class="swiper-slide__year">2019</span>
-                        <span class="swiper-slide__rating">7.7</span>
-                    </div>
-                </div>
+                <div class="swiper-wrapper"></div>
                 <!-- Add Pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
+                <div class="swiper-pagination"></div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
