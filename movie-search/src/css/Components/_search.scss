@@ -28,7 +28,7 @@ form {
     font-size: 20px;
 }
 
-.keyboard {
+.keyboard-button {
   width: 40px;
   height: 42px;
   border: 2px solid #7ba7ab;
@@ -38,7 +38,7 @@ form {
   color: #F9F0DA;
   margin-left: 2px;
 }
-.keyboard:before {
+.keyboard-button:before {
     content: "\f11c";
     font-family: FontAwesome;
     font-size: 20px;

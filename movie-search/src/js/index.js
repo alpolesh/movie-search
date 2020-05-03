@@ -6,17 +6,26 @@ import getMovieData from './API/getMovieData';
 import updateSwiper from './swiper/updateSwiper';
 import swiper from './swiper/createSwiper';
 import search from './search';
-
+import Keyboard from './virtualKeyboard';
 
 updateSwiper('clean');
 search();
 document.querySelector('.input-area').focus();
+Keyboard.init();
 
+document.querySelector('.keyboard-button').addEventListener('click', () => {
+  if (!store.isKeyboard) {
+    document.querySelector('.keyboard').style = 'display: flex;'
+    store.isKeyboard = true;
+  } else {
+    store.isKeyboard = false;
+    document.querySelector('.keyboard').style = 'display: none;'
+  } 
+})
 
 document.querySelector('.d1 form').addEventListener('change', () => {
   store.searchText = document.querySelector('form input').value;
 });
-
 
 document.querySelector('.swiper-button-next').addEventListener('click', async () => {
   if (!store.isSearch) {

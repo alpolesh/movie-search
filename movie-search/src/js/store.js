@@ -1,6 +1,7 @@
 
 
 const store = {
+    isKeyboard: false,
     searchText: '',
     currentPage: 1,
     dataBase: [
