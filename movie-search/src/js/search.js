@@ -19,7 +19,10 @@ function search() {
             await function incrPage() {store.currentPage += 1;}(); 
             await getMovieData(store.searchText, store.currentPage);
         }
-        await updateSwiper('clean');
+        if (/«/.test(document.querySelector('.error__text').textContent)) {
+            console.log('в регулярке!')
+            // await updateSwiper();
+        } else await updateSwiper('clean');
         store.isSearch = false;
     }) ;
 

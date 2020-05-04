@@ -13,6 +13,7 @@ search();
 document.querySelector('.input-area').focus();
 Keyboard.init();
 
+// Switch keyboard
 document.querySelector('.keyboard-button').addEventListener('click', () => {
   if (!store.isKeyboard) {
     document.querySelector('.keyboard').style = 'display: flex;'
