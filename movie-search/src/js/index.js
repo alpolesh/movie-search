@@ -14,7 +14,8 @@ document.querySelector('.input-area').focus();
 Keyboard.init();
 
 // Switch keyboard
-document.querySelector('.keyboard-button').addEventListener('click', () => {
+document.querySelector('.keyboard-button').addEventListener('click', (e) => {
+  if (!e.target.classList.contains('keyboard-button')) return;
   if (!store.isKeyboard) {
     document.querySelector('.keyboard').style = 'display: flex;'
     store.isKeyboard = true;

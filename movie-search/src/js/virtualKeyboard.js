@@ -64,14 +64,24 @@ const Keyboard = {
       this.pressShiftButton();
       this.activateButtonMouse();
 
-    //   document.body.addEventListener('click', (e) => {
-          
-    //       if(!e.target.classList.contains('input-area') && !e.target.classList.contains('keyboard') && !e.target.classList.contains('keyboard-button') && !e.target.classList.contains('keyboard__keys') && !e.target.classList.contains('input-area-container')) {
-    //         console.log(e.target);
-    //         document.querySelector('.keyboard').style = 'display: none;';
-    //         store.isKeyboard = false;
-    //       }
-    //   })
+      document.body.addEventListener('click', (event) => {
+        let targ = event.target;
+        let hideKeyboard = false;
+        if (!targ.classList.contains('keyboard-button') ) {
+            while (targ) {
+            if(targ.classList && (targ.classList.contains('keyboard') || targ.classList.contains('input-area'))) {
+                hideKeyboard = false;
+                break;
+            } else hideKeyboard = true;
+            targ = targ.parentNode;
+            }
+
+            if (hideKeyboard) {
+                document.querySelector('.keyboard').style = 'display: none;';
+                store.isKeyboard = false;
+            }
+          }
+      });
     },
   
     createKeys() {
