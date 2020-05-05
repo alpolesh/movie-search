@@ -25,23 +25,20 @@ document.querySelector('.keyboard-button').addEventListener('click', (e) => {
   } 
 })
 
-document.querySelector('.d1 form').addEventListener('change', () => {
-  store.searchText = document.querySelector('form input').value;
+document.querySelector('.input-area').addEventListener('input', () => {
+  store.searchText = document.querySelector('.input-area').value;
 });
 
-document.querySelector('.swiper-button-next').addEventListener('click', async () => {
+swiper.on('slideChange', async () => {
   if (!store.isSearch) {
-    if (swiper.activeIndex === (swiper.slides.length-10)) {
+    if ((Math.floor(swiper.activeIndex / 10) + 1) === store.currentPage && store.totalResults > 10) {
       store.dataBase = [];
       store.currentPage += 1;
       await getMovieData(store.searchText, store.currentPage);
       await updateSwiper();
     }
-    
   }
-  // console.log(swiper.activeIndex);
-  // console.log(swiper.slides.length);
-})
+});
 
 
 

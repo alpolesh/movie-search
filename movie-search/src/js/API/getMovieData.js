@@ -7,7 +7,6 @@ async function getMovieData(name, page) {
       const res =  await fetch(url);
       const data = await res.json();
       store.totalResults = data.totalResults;
-      console.log(data);
       if (data.Response === 'False') {
         throw (data.Error);
       }

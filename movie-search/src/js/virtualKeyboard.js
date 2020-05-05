@@ -273,6 +273,7 @@ const Keyboard = {
                 input.setRangeText('', input.selectionStart, input.selectionEnd, 'end');
               }
               input.setRangeText('', input.selectionStart, input.selectionEnd, 'end');
+              store.searchText = document.querySelector('.input-area').value;
               break;
             case 'Delete':
               if (input.selectionStart === input.selectionEnd) {
@@ -280,9 +281,10 @@ const Keyboard = {
                 input.setRangeText('', input.selectionStart, input.selectionEnd, 'end');
               }
               input.setRangeText('', input.selectionStart, input.selectionEnd, 'end');
+              store.searchText = document.querySelector('.input-area').value;
               break;
             case 'Enter':
-              input.setRangeText('\n', input.selectionStart, input.selectionEnd, 'end');
+              document.querySelector('.search').click();
               break;
             case 'Tab':
               input.setRangeText('    ', input.selectionStart, input.selectionEnd, 'end');
@@ -353,6 +355,9 @@ const Keyboard = {
                 break;
             default:
               input.setRangeText(event.target.textContent, input.selectionStart, input.selectionEnd, 'end');
+            //   store.searchText = document.querySelector('.input-area').value;
+            store.searchText = document.querySelector('.input-area').value;
+            console.log(store.searchText)
           }
         }
       });

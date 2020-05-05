@@ -2,6 +2,9 @@
 
 // eslint-disable-next-line no-undef
 const swiper = new Swiper('.swiper-container', {
+    preloadImages: true,
+    updateOnImagesReady: true,
+    longSwipes: false,
     slidesPerView: 3,
     spaceBetween: 80,
     loop: false,

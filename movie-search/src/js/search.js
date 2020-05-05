@@ -16,13 +16,14 @@ function search() {
         }
         await getMovieData(store.searchText, store.currentPage);
         if (store.totalResults > 10) {
-            await function incrPage() {store.currentPage += 1;}(); 
+            store.currentPage += 1; 
             await getMovieData(store.searchText, store.currentPage);
         }
         if (/«/.test(document.querySelector('.error__text').textContent)) {
-            console.log('в регулярке!')
+            document.querySelector('.fa-circle-o-notch').style = "display: none;";
             // await updateSwiper();
-        } else await updateSwiper('clean');
+        } else updateSwiper('clean');
+        
         store.isSearch = false;
     }) ;
 
