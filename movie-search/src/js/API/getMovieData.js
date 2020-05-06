@@ -13,7 +13,7 @@ async function getMovieData(name, page) {
       
       const container = await Promise.all(
       data.Search.map(async (elem) => {
-        if (store.currentPage === 1) {
+        if (page === 1) {
           store.dataBase = [];
         }
         const item = elem;
@@ -28,7 +28,7 @@ async function getMovieData(name, page) {
     } catch (err) {
       document.querySelector('.error__text').textContent = `«${store.searchText}»: ${err}`;
     };
-    // console.log(store.dataBase);
+    console.log(store.dataBase)
 }
 
 export default getMovieData;

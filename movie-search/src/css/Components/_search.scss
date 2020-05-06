@@ -37,14 +37,15 @@ form {
   background: #7ba7ab;
   color: #F9F0DA;
   margin-left: 2px;
+  @include media-tablet {
+    display: none;
+  }
 }
 .keyboard-button:before {
     content: "\f11c";
     font-family: FontAwesome;
     font-size: 20px;
 }
-
-
 
 .d1 {
     background: white;
