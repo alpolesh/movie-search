@@ -28,7 +28,6 @@ class Card {
             <span class="swiper-slide__rating">${rating}</span>`;
         }
         
-
         this.cardElement.innerHTML = cardContent;
     }
 }

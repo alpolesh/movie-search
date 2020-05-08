@@ -9,7 +9,9 @@ function updateSwiper(clean) {
     store.dataBase.forEach(element => {
         swiper.appendSlide(new Card(element).cardElement)
     })
+    console.log(swiper.slides.length);
     document.querySelector('.fa-circle-o-notch').style = "display: none;";
+    return swiper.slides.length;
 }
 
 export default updateSwiper;

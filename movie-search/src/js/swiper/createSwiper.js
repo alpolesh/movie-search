@@ -1,3 +1,4 @@
+import Swiper from 'swiper';
 
 
 // eslint-disable-next-line no-undef

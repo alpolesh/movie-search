@@ -30,6 +30,11 @@ function search() {
     document.querySelector('.reset').addEventListener('click', () => {
         document.querySelector('.input-area').value = '';
     });
+    return store.isSearch;
 }
 
-export default search;
+function prob(a, b) {
+    return a + b;
+}
+
+export {search, prob};

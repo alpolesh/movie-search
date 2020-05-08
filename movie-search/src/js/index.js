@@ -1,11 +1,13 @@
 import '../css/style.css';
 import '../css/style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../node_modules/swiper/css/swiper.min.css';
+
 import store from './store';
 import getMovieData from './API/getMovieData';
 import updateSwiper from './swiper/updateSwiper';
 import swiper from './swiper/createSwiper';
-import search from './search';
+import {search} from './search';
 import Keyboard from './virtualKeyboard';
 
 updateSwiper('clean');
