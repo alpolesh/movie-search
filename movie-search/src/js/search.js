@@ -5,6 +5,7 @@ import translate from './API/translate';
 
 function search() {
     document.querySelector('.search').addEventListener('click', async (e) => {
+        store.isCollection = false;
         document.querySelector('.fa-circle-o-notch').style = "display: block;";
         document.querySelector('.error__text').textContent = '';
         store.currentPage = 1;

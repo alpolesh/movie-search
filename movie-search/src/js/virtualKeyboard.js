@@ -357,7 +357,6 @@ const Keyboard = {
               input.setRangeText(event.target.textContent, input.selectionStart, input.selectionEnd, 'end');
             //   store.searchText = document.querySelector('.input-area').value;
             store.searchText = document.querySelector('.input-area').value;
-            console.log(store.searchText)
           }
         }
       });

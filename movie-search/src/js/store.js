@@ -2,8 +2,10 @@
 
 const store = {
     isKeyboard: false,
+    isCollection: false,
     searchText: '',
     currentPage: 1,
+    collection: [],
     dataBase: [
         {
             Poster: "https://m.media-amazon.com/images/M/MV5BMTQ5NjQ0NDI3NF5BMl5BanBnXkFtZTcwNDI0MjEzMw@@._V1_SX300.jpg",

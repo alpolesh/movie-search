@@ -9,11 +9,14 @@ import updateSwiper from './swiper/updateSwiper';
 import swiper from './swiper/createSwiper';
 import {search} from './search';
 import Keyboard from './virtualKeyboard';
+import showCollection from './collection/showCollection';
+
 
 updateSwiper('clean');
 search();
 document.querySelector('.input-area').focus();
 Keyboard.init();
+showCollection();
 
 // Switch keyboard
 document.querySelector('.keyboard-button').addEventListener('click', (e) => {

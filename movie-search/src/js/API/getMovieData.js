@@ -1,7 +1,6 @@
 import store from '../store';
 
 async function getMovieData(name, page) {
-    console.log('async start');
     try {
       const url = `https://www.omdbapi.com/?s=${name}&page=${page}&apikey=fb544fc0`;
       const res =  await fetch(url);
@@ -28,7 +27,6 @@ async function getMovieData(name, page) {
     } catch (err) {
       document.querySelector('.error__text').textContent = `«${store.searchText}»: ${err}`;
     };
-    console.log(store.dataBase)
 }
 
 export default getMovieData;

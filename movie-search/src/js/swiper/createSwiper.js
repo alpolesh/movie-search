@@ -10,7 +10,7 @@ const swiper = new Swiper('.swiper-container', {
     // spaceBetween: 80,
     loop: false,
     pagination: {
-      el: '.swiper-pagination',
+      el: null,
       clickable: true,
     },
     navigation: {
