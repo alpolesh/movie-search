@@ -15,17 +15,20 @@ function search() {
         if (/(^[А-я\s]+)(?!.*[A-z])/.test(store.searchText)) {
             await translate(store.searchText);
         }
-        await getMovieData(store.searchText, store.currentPage);
-        if (store.totalResults > 10) {
-            store.currentPage += 1; 
+        try {
             await getMovieData(store.searchText, store.currentPage);
-        }
-        if (/«/.test(document.querySelector('.error__text').textContent)) {
+            if (store.totalResults > 10) {
+                store.currentPage += 1; 
+                await getMovieData(store.searchText, store.currentPage);
+            }
+        } catch(err) {
             document.querySelector('.fa-circle-o-notch').style = "display: none;";
-            // await updateSwiper();
-        } else updateSwiper('clean');
-        
+            document.querySelector('.error__text').textContent = `«${store.searchText}»: ${err}`;
+            store.isSearch = false;
+            return 
+        }
         store.isSearch = false;
+        updateSwiper('clean');
     }) ;
 
     document.querySelector('.reset').addEventListener('click', () => {

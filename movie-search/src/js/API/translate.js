@@ -8,6 +8,7 @@ async function translate(message) {
     const translation = data.text;
     store.searchText = translation;
     document.querySelector('.error__text').textContent = `Results for: ${translation}`;
+    return 2;
 }
 
 export default translate;

@@ -1,6 +1,7 @@
 import store from '../store';
 
 async function getMovieData(name, page) {
+    // eslint-disable-next-line no-useless-catch
     try {
       const url = `https://www.omdbapi.com/?s=${name}&page=${page}&apikey=fb544fc0`;
       const res =  await fetch(url);
@@ -25,7 +26,7 @@ async function getMovieData(name, page) {
 
     store.dataBase = [...store.dataBase, ...container];
     } catch (err) {
-      document.querySelector('.error__text').textContent = `«${store.searchText}»: ${err}`;
+        throw err;
     };
 }
 
